@@ -34,16 +34,13 @@ def check_file(test_file_path, expected_output_file):
 def run_tests():
     maps_directory = 'example_files/maps'
 
-    # List all files in the "maps" directory
     map_files = [f for f in os.listdir(maps_directory) if
                  os.path.isfile(os.path.join(maps_directory, f))]
 
-    # Iterate through each map file
     for map_file in map_files:
         test_file_path = os.path.join(maps_directory, map_file)
         expected_output_file = os.path.join('example_files/solved', map_file)
 
-        # Check the file
         check_file(test_file_path, expected_output_file)
 
 
